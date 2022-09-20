@@ -116,8 +116,16 @@ class ActionsWheel
 	}
 
 	/**
+	 * @param array $parameters
+	 * @param CommonObject $object
+	 * @param string $action
+	 * @param HookManager $hookmanager
+	 * @return void
 	 */
+	public function printCommonFooter($parameters, $object, $action, $hookmanager)
 	{
+		$wheelJsURL = dol_buildpath('wheel/js/wheel.js', 1);
+		echo '<script src="' . $wheelJsURL . '"></script>';
 	}
 
 	/* Add here any other hooked methods... */
